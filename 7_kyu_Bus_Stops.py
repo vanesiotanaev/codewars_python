@@ -15,8 +15,11 @@ def number(bus_stops):
         sum_exit += bus_stops[i][1]
     
     return sum_enter - sum_exit
-        
 
-    
+# Второй вариант
+
+def number(bus_stops):
+    return sum(bus_stops[i][0] for i in range(len(bus_stops))) - sum(bus_stops[i][1] for i in range(len(bus_stops)))
+           
 stops_list = [[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]
-result = number(stops_list)
+print(number(stops_list))
